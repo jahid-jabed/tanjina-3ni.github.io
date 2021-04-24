@@ -39,7 +39,7 @@ var downloadtags = [{
 function loadDownloadIcons() {
     var downloadtext = ""
     for (x in downloadtags) {
-        var data = `<a class="center" href="` + downloadtags[x].link + `" target=_blank> <img class="center" style="padding: 5px!important;width: 200px;" src="` + downloadtags[x].img + `"></a>`
+        var data = `<a class="center" href="` + downloadtags[x].link + `" target=_blank> <img class="center" style="padding: 5px!important;width: 75px;" src="` + downloadtags[x].img + `"></a>`
         downloadtext += data
     }
     document.getElementById("download-list").innerHTML = downloadtext;
