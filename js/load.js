@@ -4,16 +4,19 @@
  */
 
 var socialtags = [{
-    img: "img/github.svg",
+    img: "img/github_icon.svg",
     link: "https://github.com/tanjina-3ni"
 }, {
-    img: "img/linkedin.svg",
+    img: "img/linkedin_icon.svg",
     link: "https://www.linkedin.com/in/tanjina-3ni/"
 }, {
-    img: "img/codeforces.svg",
+    img: "img/codeforces_icon.svg",
     link: "https://codeforces.com/profile/TanjinaRahman"
 }, {
-    img: "img/youtube.svg",
+    img: "img/leetcode_icon.svg",
+    link: "https://leetcode.com/tanjina-3ni/"
+}, {
+    img: "img/youtube_icon.svg",
     link: "https://www.youtube.com/c/TanjinaRahman"
 }]
 
@@ -27,6 +30,22 @@ function loadSocialIcons() {
 }
 
 loadSocialIcons()
+
+var downloadtags = [{
+    img: "img/download_icon.svg",
+    link: "resume/tanjina-rahman.pdf"
+}]
+
+function loadDownloadIcons() {
+    var downloadtext = ""
+    for (x in downloadtags) {
+        var data = `<a class="center" href="` + downloadtags[x].link + `" target=_blank> <img class="center" style="padding: 5px!important;width: 200px;" src="` + downloadtags[x].img + `"></a>`
+        downloadtext += data
+    }
+    document.getElementById("download-list").innerHTML = downloadtext;
+}
+
+loadDownloadIcons()
 
 function dayNightToggle() {
     var element = document.body;
@@ -51,3 +70,4 @@ function checkDayNight() {
 }
 
 checkDayNight()
+

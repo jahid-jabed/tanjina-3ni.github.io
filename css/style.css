@@ -11,3 +11,53 @@ h1{text-align:center!important;margin-top:50px!important;font-weight:100!importa
 button{  background: url(../img/sun.svg) no-repeat;  color: transparent;  box-shadow: none;  border: none;  width: 50px;  height: 50px;  background-position: center;  position: absolute;  cursor: pointer;  }
 .light-mode button{background: url(../img/moon.svg) no-repeat; background-position: center;}
 button:focus {outline:0;}
+
+ /* Resume */
+.resume-section{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width:0;
+  background-color: transparent;
+  transition: width 1s;
+  /* overflow-y: auto; */
+}
+.double-arrow{
+  position: fixed;
+  font-size: 50px;
+  color: #00d0ff;
+  transition: transform 1s linear;
+  /* animation: float 4s ease-in-out infinite; */
+}
+.double-arrow:hover{
+  cursor: pointer;
+  animation: none;
+}
+.drawer {
+  top: 52%;
+  right: 30px;
+  /* cursor: pointer; */
+}
+.toggleResume{
+  width: 65%;
+  overflow: auto;
+}
+.resume-section img:first-child {
+  
+}
+.resume-section img {
+  width:100%;
+  /* margin-bottom: 30px; */
+  height: 100%;
+}
+
+.animateHandler{
+  cursor: pointer;
+  transform: rotate(180deg);
+  animation:none;
+  color:black
+  
+}
+
+
