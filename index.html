@@ -18,9 +18,12 @@
 </head>
 <body>
 
-<button onclick="dayNightToggle()">Toggle dark mode</button>
-
-
+<div id="navbar">
+	<button onclick="dayNightToggle()">Toggle dark mode</button>
+	<a href="#">About</a>
+	<a href="blog/index.html">Blog</a>
+	<a href="index.html">Home</a>
+</div>
 
 <div class="container vertical-center">
     <div class="row spacing">
@@ -58,6 +61,17 @@
             // mainHeading.classList.toggle('breakThetitle')
         }
     })
+	
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0px";
+	  } else {
+		document.getElementById("navbar").style.top = "0px";
+	  }
+	}
 </script>
 </body>
 </html>

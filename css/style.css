@@ -1,4 +1,31 @@
 body{transition: all 0.5s ease;margin:0!important;font-family:Poppins,sans-serif!important;letter-spacing:2px!important;color:#fff;background:#1d1e21;font-weight:200; margin: auto!important}
+
+#navbar {
+  background-color: inherit;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: inherit;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #d4cebe;
+  color: inherit;
+}
+
+
+
 h1{text-align:center!important;margin-top:50px!important;font-weight:100!important;font-size:3em}
 *{margin:0px;padding:0px;}
 .center{margin:auto!important;text-align:center!important}
@@ -64,5 +91,21 @@ button:focus {outline:0;}
   .hide-on-mobile{
     display: none;
   }
+}
 
+.posts_div li{
+	margin: 0 0 10px 0;
+}
 
+.posts_div img {
+	width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (max-width: 500px) {
+	.posts_div img {
+		width: 100%;
+	}
+}
