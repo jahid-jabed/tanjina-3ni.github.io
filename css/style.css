@@ -92,11 +92,6 @@ button:focus {outline:0;}
   
 }
 
-@media only screen and (max-width: 500px) {
-  .hide-on-mobile{
-    display: none;
-  }
-}
 
 .posts_div li{
 	margin: 0 0 10px 0;
@@ -110,6 +105,10 @@ button:focus {outline:0;}
 }
 
 @media only screen and (max-width: 500px) {
+	.hide-on-small-screen{
+		display: none;
+	}
+  
 	.posts_div img {
 		width: 100%;
 	}
@@ -118,3 +117,4 @@ button:focus {outline:0;}
 		top: 50px;
 	}
 }
+
