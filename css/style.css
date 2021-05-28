@@ -109,4 +109,8 @@ button:focus {outline:0;}
 	.posts_div img {
 		width: 100%;
 	}
+	
+	.avatar {
+		top: 50px;
+	}
 }
