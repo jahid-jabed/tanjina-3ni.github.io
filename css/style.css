@@ -71,7 +71,6 @@ button:focus {outline:0;}
 .toggleResume{
   width: 65%;
   overflow: auto;
-  z-index: 2;
 }
 .resume-section img:first-child {
   
@@ -80,12 +79,9 @@ button:focus {outline:0;}
   width:100%;
   /* margin-bottom: 30px; */
   height: 100%;
-  z-index: 2;
 }
 
-.resume-section i {
-  z-index: 3;
-}
+
 
 .animateHandler{
   cursor: pointer;
