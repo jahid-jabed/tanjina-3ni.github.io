@@ -32,7 +32,10 @@ function loadSocialIcons() {
 loadSocialIcons()
 
 var downloadtags = [{
-    img: "img/download_icon.svg",
+    img: "img/blog_icon.svg",
+    link: "blog/index.html"
+}, {
+	img: "img/cv_icon.svg",
     link: "resume/tanjina-rahman.pdf"
 }]
 
@@ -70,4 +73,6 @@ function checkDayNight() {
 }
 
 checkDayNight()
+
+
 
