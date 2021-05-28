@@ -33,7 +33,7 @@ loadSocialIcons()
 
 var downloadtags = [{
     img: "img/blog_icon.svg",
-    link: "blog/index.html"
+    link: "#"
 }, {
 	img: "img/cv_icon.svg",
     link: "resume/tanjina-rahman.pdf"
