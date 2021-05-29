@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" shrink-to-fit=no">
+    <meta content="Portfolio website for Tanjina Rahman" name="description">
+    <meta content="Tanjina Rahman https://github.com/tanjina-3ni" name="author">
+    <title>Tanjina Rahman</title>
+    <link href="../../img/favicon.ico" rel="shortcut icon"/>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/bootstrap-grid.css" rel="stylesheet">
+	
+    <style>
+    </style>
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	
+	<script data-ad-client="ca-pub-3938834338001895" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+
+<div id="navbar">
+	<button onclick="dayNightToggle()">Toggle dark mode</button>
+	<a href="../../resume/tanjina-rahman.pdf" target="_blank">Resume</a>
+	<a href="../index.html">Blog</a>
+	<a href="../../index.html">Home</a>
+</div>
+
+<div class="container">
+    <div class="row spacing">
+		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
+			<h1>Codeforces Solution | 431A: Black Square</h1>
+			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
+			
+				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F29-05-2021-431a-black-square.html&count_bg=%23837ADB&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/></p>
+				
+				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 29 May, 2021</a></h3>
+				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
+					<p style="text-align: justify">
+						<strong>Problem Description:</strong>
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+						In this problem, phone’s screen is divided into 4 vertical strips. Every second, a black square appears on some of the strips. 
+					</p>
+					<p style="text-align: justify;">
+						<br>Four integers \(a_1, a_2, a_3, a_4 (0 \le a_1, a_2, a_3, a_4 \le 10^4) \) are given. \(a_i\) calories are wasted on touching the \(i^{th}\) strip. (\(a_1\) indicates the calories needed for touching \(1^{st}\) strip, \(a_2\) indicates the calories needed for touching \(2^{nd}\) strip and so on.)
+					</p>
+				
+					<p style="text-align: justify">
+						<br>A string \(s (1 \le |s| \le 105)\) is given. \(s\) simply indicates the number of strip where the black square appears. For example, \(s = 112314\) means \(1^{st}\) black square appeared on \(1^{st}\) strip, then on \(1^{st}\) strip again, then on \(2^{nd}\) strip, on \(3^{rd}\) strip, \(1^{st}\) strip and then on \(4^{th}\) strip. 
+					</p>
+					
+					<p style="text-align: justify">
+						<br>We have to calculate how many calories are needed to destroy all the squares.
+					</p>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+						<strong>Ideological Analysis:</strong>
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+						There are 4 strips and \(a_1, a_2, a_3, a_4\) contains the number of calories.
+					</p>
+					<p style="text-align: justify">
+						<br>\(s\) contains the strip number where the black square appears. So, simply we can count how many times black square appeared in each strip. And then multiply it with the calories required to touch the strip. We have to do this for all four strips and add them all.
+					</p>
+					<p style="text-align: justify">
+						<strong><br>Example:</strong>
+					</p>
+					<p style="text-align: justify">
+						$$a_1 = 4, a_2 = 1, a_3 = 2, a_4 = 5 and s = 2141231$$
+					</p>
+					<p style="text-align: justify">
+						<br>Here, Three \(1\)s, two \(2\)s, one \(3\), and one \(4\) in string \(s\). So, we can the total number of calories required to destroy all black squares by weighted sum of them. Such as,
+					</p>
+					<p style="text-align: justify">
+						$$ \sum\limits_{i=1}^4 {a_i * COUNT(i)\space in\space s = 3*4 + 2*1 + 1*2 + 1*5 = 21} $$
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					
+					<p style="text-align: justify">
+						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/431A - Black Square.py"  target="_blank">here</a> for Source Code.
+					</p>
+					
+				</div>
+			</div>
+			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 29 May, 2021</strong></p>
+			<p>Share this article on → <a style="text-decoration: none; color: inherit;" href="https://facebook.com/sharer.php?u=https://tanjina-3ni.github.io/blog/posts/29-05-2021-431a-black-square.html" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>, <a style="text-decoration: none; color: inherit" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://tanjina-3ni.github.io/blog/posts/29-05-2021-431a-black-square.html&amp;title=431A: Black Square" rel="nofollow" target="_blank" title="Share on LinkedIn">LinkedIn</a>.</p>
+		</div>
+	</div>
+</div>
+
+
+<script src="../../js/load.js" type="text/javascript"></script>
+<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0px";
+	  } else {
+		document.getElementById("navbar").style.top = "0px";
+	  }
+	}
+</script>
+
+</body>
+</html>
