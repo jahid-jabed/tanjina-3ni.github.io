@@ -89,7 +89,7 @@ button:focus {outline:0;}
   cursor: pointer;
   transform: rotate(180deg);
   animation:none;
-  color:white;
+  color:#00d0ff;
 }
   
 }
