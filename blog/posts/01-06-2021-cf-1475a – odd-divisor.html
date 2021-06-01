@@ -37,12 +37,13 @@
 <div class="container">
     <div class="row spacing">
 		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
-			<h1>Codeforces Solution | 707A: Brain's Photos</h1>
+			<h1>Codeforces Solution | 1475A: Odd Divisor</h1>
 			
 			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
 			
-				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F31-05-2021-707a-brains-photos.html&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/></p>
-				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 31 May, 2021</a></h3>
+				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F01-06-2021-cf-1475a%2520%25E2%2580%2593%2520odd-divisor.html&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+				</p>
+				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 01 Jun, 2021</a></h3>
 				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
 					<p style="text-align: justify">
 						<strong>Problem Description:</strong>
@@ -51,22 +52,13 @@
 						</br>
 					</p>
 					<p style="text-align: justify">
-						In this problem, a photo can be represented as a matrix sized \(n × m\), and each element of the matrix stores a symbol indicating corresponding pixel color. There are only 6 colors:
+					We have to find that a number (n) has an odd divisor or not. In another word, we have to check whether n is divisible by x or not, where x is odd, in addition x is also NOT equal to 1.
 					</p>
 					<p style="text-align: justify">
-					<br>
-						<ul>
-							<li>'C' (cyan)</li>
-							<li>'M' (magenta)</li>
-							<li>'Y' (yellow)</li>
-							<li>'W' (white)</li>
-							<li>'G' (grey)</li>
-							<li>'B' (black)</li>
-						</ul>
+					</br>For example, if \(n = 2\), n is divisible by 1 and 2. 1 is not considerable and 2 is NOT odd. So, the answer is “NO”.
 					</p>
-					
 					<p style="text-align: justify">
-						<br>If there is any pixel of C, M, Y in the photo, then it is colored. Otherwise, it is black and white. We have to find out that the photo is black and white or colored.
+					Let, \(n = 3\), here 3 is divisible by 1 and 3. 3 is odd. So, the answer is “YES”.
 					</p>
 					
 					<p style="text-align: justify">
@@ -76,22 +68,22 @@
 						<strong>Ideological Analysis:</strong>
 					</p>
 					<p style="text-align: justify">
-						</br>
+						</br>If n is odd, then the output is “YES”. Because n is divisible by itself.
 					</p>
 					<p style="text-align: justify">
-						Black and white photos contain only ‘B’, ‘W’ and ‘G’ pixels. We can check if any pixel is found ‘C’, ‘M’ or ‘Y’ then print "#Color" (without quotes). Otherwise, print "#Black&White" (without quotes).
+						</br>If n is even, we have to check it has any odd factor or not. If we keep dividing an even number by 2 and finally find the result 1, then it has no odd divisor. So, the result is “NO”. And if the result is not 1, that means we find any odd result before, then the number n has an odd divisor. So, the output is “YES”.
 					</p>
 					<p style="text-align: justify">
 						</br>
 					</p>
 					
 					<p style="text-align: justify">
-						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/707A%20-%20Brain's%20Photos.py"  target="_blank">here</a> for Source Code.
+						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/1475A%20-%20Odd%20Divisor.py"  target="_blank">here</a> for Source Code.
 					</p>
 					
 				</div>
 			</div>
-			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 31 May, 2021</strong></p>
+			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 01 Jun, 2021</strong></p>
 			
 			<p>Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
 		

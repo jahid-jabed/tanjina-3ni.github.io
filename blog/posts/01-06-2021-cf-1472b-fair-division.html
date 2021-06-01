@@ -37,12 +37,13 @@
 <div class="container">
     <div class="row spacing">
 		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
-			<h1>Codeforces Solution | 707A: Brain's Photos</h1>
+			<h1>Codeforces Solution | 1472B: Fair Division</h1>
 			
 			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
 			
-				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F31-05-2021-707a-brains-photos.html&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/></p>
-				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 31 May, 2021</a></h3>
+				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F01-06-2021-cf-1472b-fair-division.html&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+				</p>
+				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 01 Jun, 2021</a></h3>
 				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
 					<p style="text-align: justify">
 						<strong>Problem Description:</strong>
@@ -51,22 +52,27 @@
 						</br>
 					</p>
 					<p style="text-align: justify">
-						In this problem, a photo can be represented as a matrix sized \(n × m\), and each element of the matrix stores a symbol indicating corresponding pixel color. There are only 6 colors:
-					</p>
-					<p style="text-align: justify">
-					<br>
-						<ul>
-							<li>'C' (cyan)</li>
-							<li>'M' (magenta)</li>
-							<li>'Y' (yellow)</li>
-							<li>'W' (white)</li>
-							<li>'G' (grey)</li>
-							<li>'B' (black)</li>
-						</ul>
+					The first line of input contains one integer t \((1≤t≤104)\) — the number of test cases.
 					</p>
 					
 					<p style="text-align: justify">
-						<br>If there is any pixel of C, M, Y in the photo, then it is colored. Otherwise, it is black and white. We have to find out that the photo is black and white or colored.
+						</br>
+					</p>
+					<p style="text-align: justify">
+					The first line of each test case contains an integer n \((1≤n≤100) \)— the number of candies that Alice and Bob received.
+					</p>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					The next line contains n integers \(a_1,a_2,…,a_n\) — the weights of the candies. The weight of each candy is either 1 or 2.</p>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					Now we have to divide all candies so that the total weight of Alice's candies is equal to the total weight of Bob's candies. But, candies are not allowed to be cut in half. If it is possible to divide fairly, then output will be ‘YES’. ‘NO’ otherwise.
 					</p>
 					
 					<p style="text-align: justify">
@@ -75,23 +81,46 @@
 					<p style="text-align: justify">
 						<strong>Ideological Analysis:</strong>
 					</p>
+					
 					<p style="text-align: justify">
 						</br>
+						<ul>
+							<li>
+							If the total weight is odd, then it is impossible to divide in two parts equally. So, the output will be ‘NO’.
+							</br> For example, </br>
+							\(n = 3\) </br>
+							\(a_1 =  2\), \(a_2 =  1\), \(a_3 =  2\) </br>
+							\(a_1 + a_2 + a_3 = 5\) </br>
+							5 is odd and it is impossible to divide in two equal part as candies are not allowed to cut in half. 
+
+							</li>
+							</br>
+							<li>
+							If the total weight is even, but number of candies is odd and weight of every candy is same, then it is impossible to divide in two parts. 
+							</br>For example,</br>
+							\(n = 3\) </br>
+							\(a_1 = 2, a_2 = 2, a_3 = 2\) </br>
+							Though total weight is even, we can not divide them equally as we can not cut a candy in half. So, the output will be ‘NO’.
+
+							</li>
+							</br>
+							<li>
+							In every cases except these two, the output will be ‘YES’.
+							</li>
+						</ul>
 					</p>
-					<p style="text-align: justify">
-						Black and white photos contain only ‘B’, ‘W’ and ‘G’ pixels. We can check if any pixel is found ‘C’, ‘M’ or ‘Y’ then print "#Color" (without quotes). Otherwise, print "#Black&White" (without quotes).
-					</p>
+					
 					<p style="text-align: justify">
 						</br>
 					</p>
 					
 					<p style="text-align: justify">
-						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/707A%20-%20Brain's%20Photos.py"  target="_blank">here</a> for Source Code.
+						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/1472B%20-%20%20Fair%20Division.py"  target="_blank">here</a> for Source Code.
 					</p>
 					
 				</div>
 			</div>
-			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 31 May, 2021</strong></p>
+			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 01 Jun, 2021</strong></p>
 			
 			<p>Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
 		

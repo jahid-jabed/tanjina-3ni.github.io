@@ -37,12 +37,13 @@
 <div class="container">
     <div class="row spacing">
 		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
-			<h1>Codeforces Solution | 707A: Brain's Photos</h1>
+			<h1>Codeforces Solution | 1311A: Add Odd or Subtract Even</h1>
 			
 			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
 			
-				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F31-05-2021-707a-brains-photos.html&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/></p>
-				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 31 May, 2021</a></h3>
+				<p align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftanjina-3ni.github.io%2Fblog%2Fposts%2F01-06-2021-cf-1311a-add-odd-or-subtract-even.html&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+				</p>
+				<h3 id="codeforces"><img style="padding: 5px!important; width: 32px;" src="../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../index.html#codeforces">Codeforces | 01 Jun, 2021</a></h3>
 				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
 					<p style="text-align: justify">
 						<strong>Problem Description:</strong>
@@ -51,22 +52,7 @@
 						</br>
 					</p>
 					<p style="text-align: justify">
-						In this problem, a photo can be represented as a matrix sized \(n × m\), and each element of the matrix stores a symbol indicating corresponding pixel color. There are only 6 colors:
-					</p>
-					<p style="text-align: justify">
-					<br>
-						<ul>
-							<li>'C' (cyan)</li>
-							<li>'M' (magenta)</li>
-							<li>'Y' (yellow)</li>
-							<li>'W' (white)</li>
-							<li>'G' (grey)</li>
-							<li>'B' (black)</li>
-						</ul>
-					</p>
-					
-					<p style="text-align: justify">
-						<br>If there is any pixel of C, M, Y in the photo, then it is colored. Otherwise, it is black and white. We have to find out that the photo is black and white or colored.
+					We have 2 numbers a and b as input. We can obtain b from a. In each move we can add any odd number or subtract any even number. We have to count the minimum move required to obtain b from a.
 					</p>
 					
 					<p style="text-align: justify">
@@ -76,22 +62,52 @@
 						<strong>Ideological Analysis:</strong>
 					</p>
 					<p style="text-align: justify">
-						</br>
+						</br>Case 1: If \(a = b\) then, no move is required. So, answer will be ‘0’.
 					</p>
 					<p style="text-align: justify">
-						Black and white photos contain only ‘B’, ‘W’ and ‘G’ pixels. We can check if any pixel is found ‘C’, ‘M’ or ‘Y’ then print "#Color" (without quotes). Otherwise, print "#Black&White" (without quotes).
+						</br>Case 2: If \(a \le b\) then, </br>
+						<ul>
+							<li>
+							If the difference of a and b is odd then one move is required. Because we can add the difference with a \( (a + x) \) and obtain b.
+							</br>
+							For example, \(a = 2\) and \(b = 5\) , \(difference = b – a = 3\)
+							\(a + 3 = b\). So, the output will be ‘1’.
+							</li>
+							<li>
+							If the difference is even, then two moves are required. Because we can have even number by adding 2 odd numbers.</br>
+							For example, \(a = 2\) and \(b = 6\), \(difference = b – a = 4\)
+							\(a + 3 + 1 = b\). \( (a + x + x) \) So, the output will be ‘2’.
+							</li>
+						</ul>
 					</p>
+					<p style="text-align: justify">
+						</br>
+						Case 3: If \(a \ge b\) then, (opposite of Case 2)</br>
+						<ul>
+							<li>
+							if the difference of a and b is odd then two moves are required. \( (a + odd number – even number) \)
+							</br>For example, \(a = 5\) and \(b = 2\) , \(difference = a – b = 3\)
+							\(a + 1 - 4 = b\). \( (a – x + y) \) So, the output will be ‘2’.</br>
+							</li>
+							<li>
+							If the difference is even, then one move is required. Because we can subtract the difference from a \( (a – y) \) and obtain b.
+							</br>For example, \(a = 6\) and \(b = 2\), \(difference = a – b = 4\)
+							\(a - 4 = b\). \( ( a – y ) \) So, the output will be ‘1’.
+							</li>
+						</ul>
+					</p>
+					
 					<p style="text-align: justify">
 						</br>
 					</p>
 					
 					<p style="text-align: justify">
-						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/707A%20-%20Brain's%20Photos.py"  target="_blank">here</a> for Source Code.
+						Click <a href = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/1311A%20-%20Add%20Odd%20or%20Subtract%20Even.py"  target="_blank">here</a> for Source Code.
 					</p>
 					
 				</div>
 			</div>
-			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 31 May, 2021</strong></p>
+			<p><a style="text-decoration: none; color: inherit;" href="../../index.html"><strong>Tanjina Rahman</a>, 01 Jun, 2021</strong></p>
 			
 			<p>Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
 		
