@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" shrink-to-fit=no">
+    <meta content="Portfolio website for Tanjina Rahman" name="description">
+    <meta content="Tanjina Rahman https://github.com/tanjina-3ni" name="author">
+    <title>Tanjina Rahman</title>
+    <link href="../../../img/favicon.ico" rel="shortcut icon"/>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/bootstrap-grid.css" rel="stylesheet">
+	
+    <style>
+    </style>
+	<!--Math-->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	<!--Share Button-->
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60b249b701fc070012ebb4bd&product=inline-share-buttons' async='async'></script>
+	
+	<!--Google Ad-->
+	<script data-ad-client="ca-pub-3938834338001895" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<!--Important Variables-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+	<script>
+		angular.module('myApp', []).controller('myCtrl', function($scope) {
+		
+			$scope.title_post = "Codeforces Solution | 1472A: Cards for Friends";
+			$scope.post_author = "Tanjina Rahman";
+			$scope.title_tag = "Codeforces";
+			$scope.tag_url = "codeforces"
+			$scope.date = "06 June, 2021";
+			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/06-06-2021-cf-1472a-cards-for-friends";
+			$scope.problem_solution_url = "#";
+			
+			
+			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
+		});
+	</script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="LljEeW1C"></script>
+
+<div id="navbar">
+	<button onclick="dayNightToggle()">Toggle dark mode</button>
+	<a href="../../../resume/tanjina-rahman.pdf" target="_blank">Resume</a>
+	<a href="../../">Blog</a>
+	<a href="../../../">Home</a>
+</div>
+
+<div class="container">
+    <div class="row spacing">
+		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
+			<h1>{{title_post}}</h1>
+			
+			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
+			
+				<p align="center"><img src="{{count_full_url}}"/></p>
+				<h3 id="{{tag_url}}"><img style="padding: 5px!important; width: 32px;" src="../../../image/tag.svg"> <a style="color: inherit; text-decoration: none" href="../../#{{tag_url}}">{{title_tag}} | {{date}}</a></h3>
+				<!--Blog Body-->
+				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
+					<p style="text-align: justify">
+						<strong>Problem Description:</strong>
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					We have 2 numbers a and b as input. We can obtain b from a. In each move we can add any odd number or subtract any even number. We have to count the minimum move required to obtain b from a.
+					</p>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+						<strong>Ideological Analysis:</strong>
+					</p>
+					<p style="text-align: justify">
+						</br>Case 1: If \(a = b\) then, no move is required. So, answer will be ‘0’.
+					</p>
+					<p style="text-align: justify">
+						</br>Case 2: If \(a \le b\) then, </br>
+						<ul>
+							<li>
+							If the difference of a and b is odd then one move is required. Because we can add the difference with a \( (a + x) \) and obtain b.
+							</br>
+							For example, \(a = 2\) and \(b = 5\) , \(difference = b – a = 3\)
+							\(a + 3 = b\). So, the output will be ‘1’.
+							</li>
+							<li>
+							If the difference is even, then two moves are required. Because we can have even number by adding 2 odd numbers.</br>
+							For example, \(a = 2\) and \(b = 6\), \(difference = b – a = 4\)
+							\(a + 3 + 1 = b\). \( (a + x + x) \) So, the output will be ‘2’.
+							</li>
+						</ul>
+					</p>
+					<p style="text-align: justify">
+						</br>
+						Case 3: If \(a \ge b\) then, (opposite of Case 2)</br>
+						<ul>
+							<li>
+							if the difference of a and b is odd then two moves are required. \( (a + odd number – even number) \)
+							</br>For example, \(a = 5\) and \(b = 2\) , \(difference = a – b = 3\)
+							\(a + 1 - 4 = b\). \( (a – x + y) \) So, the output will be ‘2’.</br>
+							</li>
+							<li>
+							If the difference is even, then one move is required. Because we can subtract the difference from a \( (a – y) \) and obtain b.
+							</br>For example, \(a = 6\) and \(b = 2\), \(difference = a – b = 4\)
+							\(a - 4 = b\). \( ( a – y ) \) So, the output will be ‘1’.
+							</li>
+						</ul>
+					</p>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					
+					<p style="text-align: justify">
+						Click <a href = "{{problem_solution_url}}"  target="_blank">here</a> for Source Code.
+					</p>
+					
+					<!--End of Blog Body-->
+					
+					
+				</div>
+			</div>
+			<p><a style="text-decoration: none; color: inherit;" href="../../../index.html"><strong>{{post_author}}</a>, {{date}}</strong></p>
+			
+			<p>Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
+			
+			<div class="fb-comments" data-href="{{count_url}}" data-width="" data-numposts="5"></div>
+		
+		</div>
+	</div>
+</div>
+
+
+<script src="../../../js/load.js" type="text/javascript"></script>
+<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0px";
+	  } else {
+		document.getElementById("navbar").style.top = "0px";
+	  }
+	}
+</script>
+
+</body>
+</html>
