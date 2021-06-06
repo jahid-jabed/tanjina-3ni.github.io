@@ -29,7 +29,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
 	</script>
 	<script>
-		var check = window.localStorage.getItem('light-mode');
+	
 		angular.module('myApp', []).controller('myCtrl', function($scope) {
 		
 			$scope.title_post = "Codeforces Solution | 1472A: Cards for Friends";
@@ -39,7 +39,7 @@
 			$scope.date = "06 June, 2021";
 			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/06-06-2021-cf-1472a-cards-for-friends";
 			$scope.problem_solution_url = "#";
-			$score.theme = $check;
+			$scope.theme = "light";
 			
 			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
 		});
@@ -138,6 +138,7 @@
 			
 			<p>Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
 			
+			<div class="fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
 			<div align="center" class="fb-comments" data-href="{{count_url}}" data-width="75%" data-colorscheme="{{theme}}" data-numposts="5"></div>
 		
 		</div>
