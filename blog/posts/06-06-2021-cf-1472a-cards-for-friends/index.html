@@ -39,6 +39,7 @@
 			$scope.date = "06 June, 2021";
 			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/06-06-2021-cf-1472a-cards-for-friends";
 			$scope.problem_solution_url = "#";
+			$scope.theme = "light";
 			
 			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
 		});
@@ -135,12 +136,13 @@
 			</div>
 			<p><a style="text-decoration: none; color: inherit;" href="../../../index.html"><strong>{{post_author}}</a>, {{date}}</strong></p>
 			
-			<span class="fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></span>
-			
-			<p>Share this article on → <span class="sharethis-inline-share-buttons fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false" style="display: inline-block"></span></p>
-			
-			<div align="center" class="fb-comments" data-href="{{count_url}}" data-width="75%" data-numposts="5"></div>
+			<p> Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span>
+				<span style="display: inline-block" class="fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></span>
 		
+			</p>
+			
+			<div class="fb-comments" data-href="{{count_url}}" data-width="" data-numposts="5"></div>
+			
 		</div>
 	</div>
 </div>
