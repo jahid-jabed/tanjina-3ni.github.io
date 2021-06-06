@@ -38,7 +38,7 @@
 			$scope.tag_url = "codeforces"
 			$scope.date = "06 June, 2021";
 			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/06-06-2021-cf-1472a-cards-for-friends";
-			$scope.problem_solution_url = "#";
+			$scope.problem_solution_url = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/1472A%20-%20Cards%20for%20Friends.py";
 			$scope.theme = "light";
 			
 			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
@@ -76,7 +76,13 @@
 						</br>
 					</p>
 					<p style="text-align: justify">
-					We have 2 numbers a and b as input. We can obtain b from a. In each move we can add any odd number or subtract any even number. We have to count the minimum move required to obtain b from a.
+					There is a paper of size \(w×h\) which can be cut into two pieces on the following conditions:
+					
+					<ul>
+					<li>If w is even then \( (w &divide 2)×h\)</li>
+					<li>If h is even the \(w× (h&divide 2) \)</li>
+					</ul>
+					If both of them are even, then any of these two can be applied. We have to check whether it is possible to cut the sheet into at least n pieces or not. If possible then the output is ‘Yes’, otherwise ‘No’.
 					</p>
 					
 					<p style="text-align: justify">
@@ -86,39 +92,9 @@
 						<strong>Ideological Analysis:</strong>
 					</p>
 					<p style="text-align: justify">
-						</br>Case 1: If \(a = b\) then, no move is required. So, answer will be ‘0’.
-					</p>
-					<p style="text-align: justify">
-						</br>Case 2: If \(a \le b\) then, </br>
-						<ul>
-							<li>
-							If the difference of a and b is odd then one move is required. Because we can add the difference with a \( (a + x) \) and obtain b.
-							</br>
-							For example, \(a = 2\) and \(b = 5\) , \(difference = b – a = 3\)
-							\(a + 3 = b\). So, the output will be ‘1’.
-							</li>
-							<li>
-							If the difference is even, then two moves are required. Because we can have even number by adding 2 odd numbers.</br>
-							For example, \(a = 2\) and \(b = 6\), \(difference = b – a = 4\)
-							\(a + 3 + 1 = b\). \( (a + x + x) \) So, the output will be ‘2’.
-							</li>
-						</ul>
-					</p>
-					<p style="text-align: justify">
-						</br>
-						Case 3: If \(a \ge b\) then, (opposite of Case 2)</br>
-						<ul>
-							<li>
-							if the difference of a and b is odd then two moves are required. \( (a + odd number – even number) \)
-							</br>For example, \(a = 5\) and \(b = 2\) , \(difference = a – b = 3\)
-							\(a + 1 - 4 = b\). \( (a – x + y) \) So, the output will be ‘2’.</br>
-							</li>
-							<li>
-							If the difference is even, then one move is required. Because we can subtract the difference from a \( (a – y) \) and obtain b.
-							</br>For example, \(a = 6\) and \(b = 2\), \(difference = a – b = 4\)
-							\(a - 4 = b\). \( ( a – y ) \) So, the output will be ‘1’.
-							</li>
-						</ul>
+						We will keep dividing w and h until both of them are odd and keep counting the number of pieces. Here we have to keep in mind that the number of pieces is at least 1. That means if it is not possible to cut the paper, in another word, w and h both are odd, then the number of pieces is 1.
+						And every time when the paper is cut, the total piece is getting multiplied by 2.
+
 					</p>
 					
 					<p style="text-align: justify">
