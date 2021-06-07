@@ -39,7 +39,7 @@
 			$scope.date = "06 June, 2021";
 			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/06-06-2021-cf-1472a-cards-for-friends";
 			$scope.problem_solution_url = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/1472A%20-%20Cards%20for%20Friends.py";
-			$scope.theme = "light";
+			$scope.theme = localStorage.getItem('light-mode');
 			
 			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
 		});
@@ -116,9 +116,9 @@
 			</div>
 			<p><a style="text-decoration: none; color: inherit;" href="../../../index.html"><strong>{{post_author}}</a>, {{date}} </strong> 
 			<span style="display: inline-block" class="fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></span></p>
-			
+			 
 			<p><br> Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
-			<div class="fb-comments align-items-center justify-content-center" data-href="{{count_url}}" data-width="" data-numposts="5"></div>
+			<div class="fb-comments align-items-center justify-content-center" data-href="{{count_url}}" data-width="" data-numposts="5" data-colorscheme="{{theme}}"></div>
 			
 		</div>
 	</div>
