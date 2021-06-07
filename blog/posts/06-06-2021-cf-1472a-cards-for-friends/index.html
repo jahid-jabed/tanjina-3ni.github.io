@@ -29,7 +29,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
 	</script>
 	<script>
-	
+
 		angular.module('myApp', []).controller('myCtrl', function($scope) {
 		
 			$scope.title_post = "Codeforces Solution | 1472A: Cards for Friends";
@@ -39,7 +39,15 @@
 			$scope.date = "06 June, 2021";
 			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/06-06-2021-cf-1472a-cards-for-friends";
 			$scope.problem_solution_url = "https://github.com/tanjina-3ni/CodeForces-Solutions/blob/main/1472A%20-%20Cards%20for%20Friends.py";
-			$scope.theme = localStorage.getItem('light-mode');
+			$scope.mode = document.body.classList.toggle("light-mode");
+			if($scope.mode)
+			{
+				$scope.theme = "light";
+			}
+			else
+			{
+				$scope.theme = "dark";
+			}
 			
 			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
 		});
@@ -61,7 +69,7 @@
 <div class="container">
     <div class="row spacing">
 		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
-			<h1>{{title_post}}</h1>
+			<h1>{{title_post}}{{theme}}</h1>
 			
 			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
 			
