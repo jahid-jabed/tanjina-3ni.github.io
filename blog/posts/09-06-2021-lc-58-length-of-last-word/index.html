@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" shrink-to-fit=no">
+    <meta content="Portfolio website for Tanjina Rahman" name="description">
+    <meta content="Tanjina Rahman https://github.com/tanjina-3ni" name="author">
+    <title>Tanjina Rahman</title>
+    <link href="../../../img/favicon.ico" rel="shortcut icon"/>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/bootstrap-grid.css" rel="stylesheet">
+	
+    <style>
+    </style>
+	<!--Math-->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	<!--Share Button-->
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60b249b701fc070012ebb4bd&product=inline-share-buttons' async='async'></script>
+	
+	<!--Google Ad-->
+	<script data-ad-client="ca-pub-3938834338001895" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<!--Important Variables-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+	<script>
+
+		angular.module('myApp', []).controller('myCtrl', function($scope) {
+		
+			$scope.title_post = "LeetCode Solution | 58: Length of Last Word";
+			$scope.post_author = "Tanjina Rahman";
+			$scope.title_tag = "LeetCode";
+			$scope.tag_url = "leetcode"
+			$scope.date = "09 June, 2021";
+			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/09-06-2021-lc-58-length-of-last-word";
+			$scope.problem_solution_url = "https://github.com/tanjina-3ni/LeetCode-Solutions/blob/main/58.%20Length%20of%20Last%20Word.py";
+			$scope.theme = "dark";
+			
+			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
+		});
+	</script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="LljEeW1C"></script>
+
+<div id="navbar">
+	<button onclick="dayNightToggle()">Toggle dark mode</button>
+	<a href="../../../resume/tanjina-rahman.pdf" target="_blank">Resume</a>
+	<a href="../../">Blog</a>
+	<a href="../../../">Home</a>
+</div>
+
+<div class="container">
+    <div class="row spacing">
+		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
+			<h1>{{title_post}}</h1>
+			
+			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
+			
+				<p align="center"><img src="{{count_full_url}}"/></p>
+				<h3 id="{{tag_url}}"><img style="padding: 5px!important; width: 32px;" src="../../../image/tag.svg"/> <a style="color: inherit; text-decoration: none" href="../../#{{tag_url}}">{{title_tag}} | {{date}}</a></h3>
+				<!--Blog Body-->
+				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
+					<p style="text-align: justify">
+						<strong>Problem Description:</strong>
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					s is a string that is our input. Words in s are separated by spaces. We have to print the length of the last word. If there is no word, then the output is 0. If there is a single word, then output is the length of that word.
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p> 
+					Constraints: </br></br>
+					<ul>
+					<li>\(1 \le s.length \le 10^4\)</li>
+					<li>s consists of only English letters and spaces ' '.</li>
+					</ul>
+					</p>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+						<strong>Ideological Analysis:</strong>
+					</p>
+					<p style="text-align: justify">
+						If there is no word then we have nothing to check. Otherwise, we have to indicate the last word. So, we can split the string by spaces and find the number of words! Then print the length of the last word!
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					
+					
+					<p style="text-align: justify">
+						Click <a href = "{{problem_solution_url}}"  target="_blank">here</a> for Source Code.
+					</p>
+					
+					<!--End of Blog Body-->
+					
+					
+				</div>
+			</div>
+			<p><a style="text-decoration: none; color: inherit;" href="../../../index.html"><strong>{{post_author}}</a>, {{date}} </strong> 
+			<span style="display: inline-block" class="fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></span></p>
+			 
+			<p><br> Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
+			<div style="color: inherit !important;" class="fb-comments align-items-center justify-content-center" data-href="{{count_url}}" data-width="" data-numposts="5" data-colorscheme="{{theme}}"></div>
+			
+		</div>
+	</div>
+</div>
+
+
+<script src="../../../js/load.js" type="text/javascript"></script>
+<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0px";
+	  } else {
+		document.getElementById("navbar").style.top = "0px";
+	  }
+	}
+</script>
+
+</body>
+</html>
