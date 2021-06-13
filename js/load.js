@@ -61,7 +61,7 @@ function dayNightToggle() {
     }
 
 }
-dayNightToggle()
+
 
 function checkDayNight() {
     var check = window.localStorage.getItem('light-mode');
@@ -73,7 +73,6 @@ function checkDayNight() {
     }
 }
 
-checkDayNight()
 
 
 
