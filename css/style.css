@@ -39,9 +39,9 @@ h1{text-align:center!important;margin-top:50px!important;font-weight:100!importa
 @media screen and (min-width: 575px) {.resume-text a{justify-content: flex-end;}}
 
 .light-mode{color:#fff!important;background:#1d1e21!important;}
-button{  background: url(../img/sun.svg) no-repeat;  color: transparent;  box-shadow: none;  border: none;  width: 50px;  height: 50px;  background-position: center;  position: absolute;  cursor: pointer;  }
+button{  background: url(../img/moon.svg) no-repeat;  color: inherit;  box-shadow: none;  border: none;  width: 50px;  height: 50px;  background-position: center;  position: absolute;  cursor: pointer;  }
 
-.light-mode button{background: url(../img/moon.svg) no-repeat; background-position: center;}
+.light-mode button{background: url(../img/sun.svg) no-repeat; background-position: center;}
 button:focus {outline:0;}
 
  /* Resume */
