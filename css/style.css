@@ -1,4 +1,4 @@
-body{transition: all 0.5s ease;margin:0!important;font-family:Poppins,sans-serif!important;letter-spacing:2px!important;color:#fff;background:#1d1e21;font-weight:200; margin: auto!important}
+body{transition: all 0.5s ease;margin:0!important;font-family:Poppins,sans-serif!important;letter-spacing:2px!important;color:#1d1e21;background:#fff;font-weight:200; margin: auto!important}
 
 #navbar {
   background-color: inherit;
@@ -37,11 +37,12 @@ h1{text-align:center!important;margin-top:50px!important;font-weight:100!importa
 .title-desc{margin-top:20px!important;margin-bottom:30px!important;max-width:450px!important;font-weight:200;font-size:18px}
 @media screen and (max-width: 576px) {.resume-text a{justify-content: center;}}
 @media screen and (min-width: 575px) {.resume-text a{justify-content: flex-end;}}
-.light-mode button{background: url(../img/moon.svg) no-repeat; background-position: center;}
-button:focus {outline:0;}
-.light-mode{color:#1d1e21!important;background:#fff!important;}
+
+.light-mode{color:#fff!important;background:#1d1e21!important;}
 button{  background: url(../img/sun.svg) no-repeat;  color: transparent;  box-shadow: none;  border: none;  width: 50px;  height: 50px;  background-position: center;  position: absolute;  cursor: pointer;  }
 
+.light-mode button{background: url(../img/moon.svg) no-repeat; background-position: center;}
+button:focus {outline:0;}
 
  /* Resume */
 .resume-section{
