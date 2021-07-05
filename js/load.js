@@ -16,6 +16,9 @@ var socialtags = [{
     img: "img/leetcode_icon.svg",
     link: "https://leetcode.com/tanjina-3ni/"
 }, {
+    img: "img/hackerrank_icon.svg",
+    link: "https://www.hackerrank.com/tanjina_3ni"
+}, {
     img: "img/youtube_icon.svg",
     link: "https://www.youtube.com/c/TanjinaRahman"
 }]
