@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" shrink-to-fit=no">
+    <meta content="Portfolio website for Tanjina Rahman" name="description">
+    <meta content="Tanjina Rahman https://github.com/tanjina-3ni" name="author">
+    <title>Tanjina Rahman</title>
+    <link href="../../../img/favicon.ico" rel="shortcut icon"/>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/bootstrap-grid.css" rel="stylesheet">
+	
+    <style>
+    </style>
+	<!--Math-->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+	<!--Share Button-->
+	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60b249b701fc070012ebb4bd&product=inline-share-buttons' async='async'></script>
+	
+	<!--Google Ad-->
+	<script data-ad-client="ca-pub-3938834338001895" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<!--Important Variables-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+	<script>
+
+		angular.module('myApp', []).controller('myCtrl', function($scope) {
+		
+			$scope.title_post = "LeetCode Solution | 232. Implement Queue using Stacks";
+			$scope.post_author = "Tanjina Rahman";
+			$scope.title_tag = "LeetCode";
+			$scope.tag_url = "leetcode"
+			$scope.date = "14 July, 2021";
+			$scope.count_url = "https://tanjina-3ni.github.io/blog/posts/14-07-2021-lc-232-iImplement-queue-using-stacks";
+			$scope.problem_solution_url = "https://github.com/tanjina-3ni/LeetCode-Solutions/blob/main/232.%20Implement%20Queue%20using%20Stacks%20(two%20stacks).py";
+			$scope.theme = "dark";
+			
+			$scope.count_full_url = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + $scope.count_url + "&count_bg=%237251D7&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false";
+		});
+	</script>
+
+</head>
+<body  ng-app="myApp" ng-controller="myCtrl">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="LljEeW1C"></script>
+
+<div id="navbar">
+	<button onclick="dayNightToggle()">Toggle dark mode</button>
+	<a href="../../../resume/tanjina-rahman.pdf" target="_blank">Resume</a>
+	<a href="../../">Blog</a>
+	<a href="../../../">Home</a>
+
+</div>
+
+<div class="container">
+    <div class="row spacing">
+		<div class="col-12 col-sm-12 col-lg-12 col-md-12 left spacing">
+			<h1>{{title_post}}</h1>
+			
+			<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing">
+			
+				<p align="center"><img src="{{count_full_url}}"/></p>
+				<h3 id="{{tag_url}}"><img style="padding: 5px!important; width: 32px;" src="../../../image/tag.svg"/> <a style="color: inherit; text-decoration: none" href="../../#{{tag_url}}">{{title_tag}} | {{date}}</a></h3>
+				<!--Blog Body-->
+				<div class="col-12 col-sm-12 col-lg-12 col-md-12 spacing posts_div">
+					<p style="text-align: justify">
+						<strong>Problem Description:</strong>
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					In this problem, we have to implement a first in first out (FIFO) queue using only two stacks (LIFO). The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty). Basically, we have to implement some statements – PUSH, POP, PEEK, Empty. When we get “push” we have to perform PUSH operation, “pop” for POP operation. If we get “peek”, then we have to return the front of the queue, that means, the element we pop in next POP instruction. And we have to check whether the stacks are empty or not for the “empty” function.
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					
+					<p style="text-align: justify">
+						<strong>Ideological Analysis:</strong>
+					</p>
+					<p style="text-align: justify">
+						We have to implement FIFO (First In First Out) using LIFO (Last In First Out). In python, actually, we don’t need two stacks and for the solution you may click <a href = "https://github.com/tanjina-3ni/LeetCode-Solutions/blob/main/232.%20Implement%20Queue%20using%20Stacks.py"  target="_blank">here</a>.
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					Today we are trying to solve this problem using two stacks. Before going deeper, let’s see a figure.
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<div class="col-8 col-sm-8 col-lg-6 col-md-6 center"><img src="image/14-07-2021-lc-232-fig0.png" style=""></div>
+					<div class="col-8 col-sm-8 col-lg-6 col-md-6 center"><img src="image/14-07-2021-lc-232-fig1.png" style=""></div>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					In the beginning, both stacks are empty. So, we PUSH into stack 1 until the POP request comes. When we get a POP request, we POP all elements from Stack 1 and PUSH them into Stack 2 and then we POP an element from stack 2. That means, when a POP request comes, we make Stack 1 empty and then POP from stack 2. But what if we get another PUSH request and Stack 2 is not empty? Well, according to our logic, we PUSH it to Stack 1, and then, when a POP request comes we move them to Stack 2. And POP from Stack 2, right? Okay, then let’s check the situation with a figure.
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					
+					<div class="col-8 col-sm-8 col-lg-6 col-md-6 center"><img src="image/14-07-2021-lc-232-fig2.png" style=""></div>
+					
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					Now, if we POP, then get 7 instead of 3 (!). So, when we PUSH into Stack 1, we have to check whether Stack 2 is empty or not. If Stack 2 is not empty, then we have to retransfer those elements into Stack 1 and then PUSH the new element.
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<div class="col-8 col-sm-8 col-lg-6 col-md-6 center"><img src="image/14-07-2021-lc-232-fig3.png" style=""></div>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					<p style="text-align: justify">
+					This is how we can implement Queue (FIFO) using two Stacks (LIFO).
+					</p>
+					<p style="text-align: justify">
+						</br>
+					</p>
+					
+					
+					<p style="text-align: justify">
+						Click <a href = "{{problem_solution_url}}"  target="_blank">here</a> for Source Code.
+					</p>
+					
+					<!--End of Blog Body-->
+					
+					
+				</div>
+			</div>
+			<p><a style="text-decoration: none; color: inherit;" href="../../../index.html"><strong>{{post_author}}</a>, {{date}} </strong> 
+			<span style="display: inline-block" class="fb-like" data-href="{{count_url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></span></p>
+			 
+			<p><br> Share this article on → <span class="sharethis-inline-share-buttons" style="display: inline-block"></span></p>
+			<div style="color: inherit !important;" class="fb-comments align-items-center justify-content-center" data-href="{{count_url}}" data-width="" data-numposts="5" data-colorscheme="{{theme}}"></div>
+			
+		</div>
+	</div>
+</div>
+
+
+<script src="../../../js/load.js" type="text/javascript"></script>
+<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0px";
+	  } else {
+		document.getElementById("navbar").style.top = "0px";
+	  }
+	}
+</script>
+
+</body>
+</html>
